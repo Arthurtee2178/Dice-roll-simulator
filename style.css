@@ -1,0 +1,87 @@
+body{
+    font-family: "open Sans", sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: rgb(228, 238, 235);
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 2rem;
+
+}
+.Dices{
+        display: flex; 
+        flex-direction: row; /* ensure horizontal layout */
+        flex-wrap: nowrap;   /* keep dice side-by-side */
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px;
+}
+
+.dice{
+    font-size: 7rem;
+    margin: 5px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Responsive: reduce dice size on small screens */
+@media (max-width: 420px) {
+    .dice { font-size: 4.5rem; }
+}
+
+
+.roll-animation{
+    animation-name: roll;
+}
+
+
+@keyframes roll{
+    0%{
+        transform: rotateY(0deg)rotateX(0deg);
+    }
+    100%{
+        transform: rotateY(720deg) rotateX(720deg);
+    }
+}
+
+button{
+    background-color: blue;
+    color: rgb(247, 243, 243);
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+button:hover{
+    background-color: aliceblue;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+li{
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: antiquewhite;
+    border-radius: .5rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span{
+    font-size: 2rem;
+    margin-right:1rem;
+    
+}
